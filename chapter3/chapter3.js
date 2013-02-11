@@ -110,3 +110,25 @@ console.log(another_stooge.nickname);
 // another_stoogeからnicknameプロパテイxが削除され、プロトタイプ上のnicknameプロパティが見えるようになる
 delete another_stooge.nickname;
 console.log(another_stooge.nickname);
+
+// 3.9 グローバル領域の利用を減らす
+// グローバル変数を最低限に利用する
+var MYAPP = {};
+MYAPP.stooge = {
+	'first-name': 'Joe',
+	'last-name': 'Howord'
+};
+MYAPP.flight = {
+	airline: 'Oceanic',
+	number: 815,
+	departure: {
+		IATA: 'SYD',
+		time: '2013-02-11 22:00',
+		city: 'Sydney'
+	},
+	arrival: {
+		IATA: 'LAX',
+		time: '2013-02-11 21:00',
+		city: 'Los Angeles'
+	}
+};
