@@ -102,3 +102,11 @@ var properties = [
 for(i = 0; i < properties.length; i += 1) {
 	document.writeln(properties[i] + ': ' + another_stooge[properties[i]]);
 }
+
+// プロパティの削除
+// delete演算子
+console.log(another_stooge.nickname);
+
+// another_stoogeからnicknameプロパテイxが削除され、プロトタイプ上のnicknameプロパティが見えるようになる
+delete another_stooge.nickname;
+console.log(another_stooge.nickname);
